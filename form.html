@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Anime Favorit</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h2 class="tulis">Tambahkan Anime Favoritmu</h2>
+    </header>
+    <form action="table.html" method="GET">
+      <label for="nama">Nama Anime:</label>
+      <input type="text" id="nama" name="nama" required /><br />
+
+      <label for="genre">Genre:</label>
+      <select id="genre" name="genre">
+        <option value="shounen">Shounen</option>
+        <option value="shoujo">Shoujo</option>
+        <option value="action">Action</option>
+        <option value="horror">Horror</option>
+        <option value="adventure">Adventure</option></select
+      ><br />
+
+      <label for="tahun">Tahun Rilis:</label>
+      <input type="number" id="tahun" name="tahun" required /><br />
+
+      <label>Peringkat:</label><br />
+      <input type="radio" name="peringkat" value="5" required /> 5<br />
+      <input type="radio" name="peringkat" value="4" required /> 4<br />
+      <input type="radio" name="peringkat" value="3" required /> 3<br />
+      <input type="radio" name="peringkat" value="2" required /> 2<br />
+      <input type="radio" name="peringkat" value="1" required /> 1<br />
+
+      <input type="submit" value="Kirim" />
+    </form>
+  </body>
+</html>

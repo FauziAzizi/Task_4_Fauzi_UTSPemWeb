@@ -1,0 +1,263 @@
+/* Styling dasar untuk body dengan background */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("LATAR.jpg"); /* Lokasi gambar */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+}
+
+/* Styling overlay untuk efek warna */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay warna hitam transparan */
+  z-index: -1;
+}
+
+/* Styling header */
+header {
+  display: flex;
+  align-items: center; /* Agar logo dan judul sejajar secara vertikal */
+  justify-content: center;
+  background-color: rgba(255,204,0,0.9); /* Latar belakang menyatu untuk header */
+  padding: 10px 20px; /* Padding untuk memberi ruang di sekitar konten */
+  border-radius: 10px; /* Membuat sudut melengkung pada background header */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 50px; /* Atur ukuran logo */
+  height: auto; /* Menjaga proporsi logo */
+  margin-right: 20px; /* Jarak antara logo dan judul */
+}
+
+header h1 {
+  font-size: 48px;
+  margin: 0;
+  color: white;
+}
+
+header img {
+  margin-top: 10px;
+  width: 150px;
+  height: auto;
+}
+
+/* Styling navigasi */
+nav {
+  background-color: rgba(40, 44, 52, 0.8);
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Styling main content */
+main {
+  background-color: rgba(255, 225, 225, 0.8); /* Warna latar belakang */
+  padding: 20px;
+  margin: 20px auto; /* Agar elemen berada di tengah */
+  max-width: 600px; /* Membatasi lebar maksimal */
+  border-radius: 8px; /* Membuat sudut melengkung */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+main p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Styling sidebar */
+aside {
+  padding: 10px;
+}
+
+aside h2 {
+  color: white;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+/* Layout dan styling list anime terbaru */
+.anime-recommendation {
+  background-color: rgba(0,0,0,0.7); /* Latar belakang gelap dengan transparansi */
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 600px;
+  border-radius: 12px; /* Membuat sudut melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  text-align: center;
+  color: #fff; /* Warna teks putih agar kontras */
+  position: relative;
+  top: 40%; /* Mengatur jarak dari atas */
+  transform: translateY(-40%);
+}
+
+/* Judul untuk bagian rekomendasi anime */
+.anime-recommendation h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: black; /* Warna emas untuk judul */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Arial Black", sans-serif; /* Gaya font tebal */
+}
+
+/* Daftar anime */
+.anime-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Gaya untuk setiap item anime */
+.anime-item {
+  background-color: rgba(255,255,255,0.1); /* Latar belakang semi-transparan */
+  padding: 15px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan kecil */
+  color: white; 
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi halus */
+  cursor: pointer; 
+}
+
+/* Efek hover untuk item anime */
+.anime-item:hover {
+  color: red;
+  background-color: rgba(255,255,255,0.8); /* Latar belakang berubah saat hover */
+  transform: scale(1.05); /* Sedikit memperbesar item saat hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan saat hover */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .anime-recommendation {
+    top: 30%;
+    transform: translateY(-30%);
+  }
+}
+
+/* Styling form */
+form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+input[type="submit"] {
+  background-color: rgba(40, 44, 52, 0.8);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Styling tabel */
+h1 {
+  text-align: center;
+  color: #343a40;
+}
+
+/* Styling table */
+tbody {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.table-container {
+  width: 80%;
+  max-height: 400px; /* Tentukan tinggi maksimum untuk scroll */
+  margin: 100px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Aktifkan scroll vertikal */
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 12px 15px;
+  text-align: left;
+}
+th {
+  background-color: #343a40;
+  color: white;
+}
+tbody tr:nth-child(odd) {
+  background-color: white; /* Warna latar belakang untuk baris ganjil */
+}
+tbody tr:nth-child(even) {
+  background-color: #e9e9e9; /* Warna latar belakang untuk baris genap */
+}
